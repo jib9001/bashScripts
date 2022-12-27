@@ -1,0 +1,30 @@
+#!/bin/bash
+if [ -d ./01 ]; then
+cd 01
+mv ./GDmenu* ./../
+cd ./../
+rm -R ./01
+fi
+if [ -f ./GDmenu* ]; then
+mkdir 01
+mv ./GDmenu* ./01/
+declare -i COUNT=2
+else
+echo "No GDmenu file detected"
+declare -i COUNT=1
+fi
+for FILE in *; do
+if [ -f "$FILE" ]; then
+if [ $COUNT -le 9 ]; then
+DIR="0$COUNT"
+mkdir $DIR
+mv "$FILE" $DIR
+COUNT+=1
+else
+DIR="$COUNT"
+mkdir $DIR
+mv "$FILE" $DIR
+COUNT+=1
+fi
+fi
+done
