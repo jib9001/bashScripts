@@ -9,3 +9,5 @@ Download the script you want to use
 Open a terminal in the same directory and run: chmod +x <script name>
 Then place the script in the root/usr/bin directory
 Finally, type the name of the script into the terminal and it will execute
+
+The protonUpdate one doesn't seem to be working properly. It puts the files in the appropriate place as far as I can tell, but steam doesn't see the options after running it
