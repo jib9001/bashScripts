@@ -11,3 +11,11 @@ Then place the script in the root/usr/bin directory
 Finally, type the name of the script into the terminal and it will execute
 
 The protonUpdate one doesn't seem to be working properly. It puts the files in the appropriate place as far as I can tell, but steam doesn't see the options after running it
+
+Script Descriptions:
+aptFix - fixes broken installs in apt for ubuntu based systems
+dpkgFix - resets dpkg config to fix issues with apt installs
+gdmenuGenerator - creates the folder structure for a gdemu optical drive emulator for dreamcast, only works with cdi files currently
+gdmenuList - creates a text file displaying the contents of a gdemu folder structure for easier troubleshooting
+protonUpdate - downloads the latest verseion of Steam GE Proton and places it in the appropriate folder to use with steam
+update - updates apt repositories, upgrades apt installed software, removes any unnecessary packages, and updates flatpak software
