@@ -14,7 +14,7 @@ Open a terminal in the same directory and run:
 ``` chmod +x <script name> ```
 
 Then place a copy of the script in the /bin directory
-You can do this with the following command:
+You can do this with the following command: 
 ``` sudo cp <script name> /bin ```
 
 ## Usage:
