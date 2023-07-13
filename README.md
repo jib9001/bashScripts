@@ -10,12 +10,10 @@ You can install all of the scripts by running the install script as super user
 
 ### To install individual scripts:
 Download the script you want to use
-Open a terminal in the same directory and run: 
-``` chmod +x <script name> ```
+Open a terminal in the same directory and run: ``` chmod +x <script name> ```
 
 Then place a copy of the script in the /bin directory
-You can do this with the following command: 
-``` sudo cp <script name> /bin ```
+You can do this with the following command: ``` sudo cp <script name> /bin ```
 
 ## Usage:
 After installation, just type the name of the script into the terminal and it will run
