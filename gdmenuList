@@ -1,25 +1,25 @@
 #!/bin/bash
 read -p "Enter the name of the game list file(including file extension): " LISTNAME
 if [ ! -f ./$LISTNAME ]; then
-touch $LISTNAME
-declare -i FOLDER=1
-for FILE in *; do
-if [ -d $FILE ]; then
-cd $FILE
-if [ -f ./$LISTNAME ]; then
-rm $LISTNAME
-fi
-echo -e "Folder- $FOLDER" >> ./../$LISTNAME
-echo " " >> ./../$LISTNAME
-ls >> ./../$LISTNAME
-echo -e "\n\n" >> ./../$LISTNAME
-FOLDER+=1
-cd ../
+    touch $LISTNAME
+    declare -i FOLDER=1
+    for FILE in *; do
+        if [ -d $FILE ]; then
+            cd $FILE
+            if [ -f ./$LISTNAME ]; then
+                rm $LISTNAME
+            fi
+            echo -e "Folder- $FOLDER" >>./../$LISTNAME
+            echo " " >>./../$LISTNAME
+            ls >>./../$LISTNAME
+            echo -e "\n\n" >>./../$LISTNAME
+            FOLDER+=1
+            cd ../
+        else
+            echo $FILE
+            echo " is not a directory"
+        fi
+    done
 else
-echo $FILE 
-echo " is not a directory"
-fi
-done
-else
-echo "gameList.txt already exists"
+    echo "gameList.txt already exists"
 fi
